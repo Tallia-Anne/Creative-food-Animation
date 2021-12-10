@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Creative food Animation</title>
+</head>
+
+<body>
+    <div class="overlay">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div>
+    <main>
+
+        <header>
+            <!-- liste n1 -->
+            <ul>
+                <li>
+                    <a href="#">Recette</a>
+                    <div class="megamenu">
+                        <ul>
+                            <li><a href="#">Repas <span>+</span></a></li>
+                            <li><a href="#">Dinner <span>+</span></a></li>
+                            <li><a href="#">Apéro <span>+</span></a></li>
+                            <li><a href="#">Petit déj <span>+</span></a></li>
+                            <li><a href="#">Pâte <span>+</span></a></li>
+                            <li><a href="#">Salade <span>+</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Dessert</a>
+                    <div class="megamenu">
+                        <ul>
+                            <li><a href="#">Tarte <span>+</span></a></li>
+                            <li><a href="#">Gateau <span>+</span></a></li>
+                            <li><a href="#">verrine <span>+</span></a></li>
+                            <li><a href="#">Glace <span>+</span></a></li>
+                            <li><a href="#">Crêpes <span>+</span></a></li>
+                            <li><a href="#">Cookies <span>+</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+            <!-- liste n1 -->
+            <!-- logo -->
+            <div class="logo">
+                <img src="image/Logo_de_cuisine__1_-removebg-preview (1).png" alt="logo" width="60px">
+            </div>
+            <!-- logo -->
+            <!-- liste n2 -->
+            <ul>
+                <li>
+                    <a href="#">Produits</a>
+                </li>
+                <li>
+                    <a href="#">Offers</a>
+                </li>
+
+            </ul>
+            <!-- liste n2 -->
+        </header>
+        <div class="content">
+            <div class="item">
+                <img src="image/image1.jpg" alt="">
+                <div class="text">
+                    <div class="text-inner">
+                        <h3>Repas</h3>
+                        <a href="#">Explore <span>+</span></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="image/image2.jpg" alt="">
+                <div class="text">
+                    <div class="text-inner">
+                        <h3>Dessert</h3>
+                        <a href="#">Explore <span>+</span></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="image/image3.jpg" alt="">
+                <div class="text">
+                    <div class="text-inner">
+                        <h3>Fruits</h3>
+                        <a href="#">Explore <span>+</span></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="image/image4.jpg" alt="">
+                <div class="text">
+                    <div class="text-inner">
+                        <h3>Fête</h3>
+                        <a href="#">Explore <span>+</span></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+
+    <script>
+        anime({
+
+            targets: '.overlay div',
+            scaleX: 0,
+            duration: 1500,
+            deplay: anime.stagger(200, {
+                start: 1000
+            }),
+            easing: 'easeOutSine'
+
+        });
+        anime({
+
+            targets: '.content .item',
+            opacity: [0, 1],
+            duration: 300,
+            deplay: anime.stagger(500),
+            easing: 'easeOutSine'
+
+        });
+        anime({
+
+            targets: '.overlay',
+            scaleX: 0,
+            deplay: 400,
+            easing: 'easeOutSine'
+
+        });
+        anime({
+
+            targets: 'header',
+            translateY: [-100, 0],
+            opacity: [0, 1],
+            duration: 1000,
+            deplay: 3000,
+            easing: 'easeOutSine'
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     outline: none;
+ }
+ 
+ body {
+     overflow-x: hidden;
+     font-family: Poppins, 'sans-serif';
+ }
+ 
+ header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px 100px;
+     transition: all ease 0.5s;
+     z-index: 999;
+ }
+ 
+ header:hover {
+     background-color: #fff;
+ }
+ 
+ header ul li {
+     display: inline-block;
+     margin: 0 15px;
+ }
+ 
+ header ul li a {
+     text-decoration: none;
+     color: orangered;
+     transition: all ease 0.5s;
+ }
+ 
+ header ul li a:hover {
+     opacity: .5;
+ }
+ 
+ .megamenu {
+     position: absolute;
+     left: 0;
+     top: 74px;
+     width: 100%;
+     background-color: #fff;
+     padding: 30px 100px;
+     display: none;
+ }
+ 
+ header ul li:hover .megamenu {
+     display: block;
+ }
+ 
+ .megamenu ul li {
+     width: 100%;
+     margin-bottom: 5px;
+ }
+ 
+ .megamenu ul li a span {
+     font-size: 18px;
+     opacity: 0;
+     transition: all ease 0.5s;
+ }
+ 
+ .megamenu ul li a:hover span {
+     opacity: 1;
+ }
+ 
+ .content {
+     display: flex;
+     flex-wrap: nowrap;
+     height: 100vh;
+ }
+ 
+ .content .item {
+     position: relative;
+     width: 100%;
+     overflow: 100%;
+     transition: all ease 1s;
+ }
+ 
+ .content .item img {
+     width: 100%;
+     height: 100vh;
+     object-fit: cover;
+ }
+ 
+ .content .item:hover {
+     width: 200%;
+ }
+ 
+ .content .item .text {
+     position: absolute;
+     left: 0;
+     bottom: -50px;
+     width: 100%;
+     height: 100%;
+     padding: 50px 50px 100px;
+     color: #fff;
+     background-image: linear-gradient(to bottom, transparent, rgb(0 0 0 /40%));
+     display: flex;
+     align-items: flex-end;
+     opacity: 0;
+     transition: all ease 0.5s 0.2s;
+ }
+ 
+ .content .item:hover .text {
+     opacity: 1;
+     bottom: 0;
+ }
+ 
+ .content .item .text h3 {
+     font-size: 28px;
+     font-weight: 400;
+     margin-bottom: 5px;
+ }
+ 
+ .content .item .text a {
+     color: #fff;
+     text-decoration: none;
+     font-size: 18px;
+ }
+ 
+ .content .item .text a span {
+     font-size: 20px;
+     display: inline-block;
+     transition: all ease 2s;
+ }
+ 
+ .content .item .text a:hover span {
+     transition: rotate(360deg);
+ }
+ 
+ .overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 9999;
+     display: flex;
+     flex-wrap: nowrap;
+ }
+ 
+ .overlay div {
+     width: 100%;
+     background-color: #ffe5b4;
+     transform-origin: left;
+ }
+ 
+ .overlay div:nth-child(1) {
+     background-color: #ee9bb7;
+ }
+ 
+ .overlay div:nth-child(2) {
+     background-color: #daf59a;
+ }
+ 
+ .overlay div:nth-child(3) {
+     background-color: #fea1ee;
+ }
